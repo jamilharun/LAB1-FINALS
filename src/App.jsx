@@ -22,9 +22,9 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-          {process.env.SECRET_KEY}
-          {process.env.API_KEY}
+          Edit <code>src/App.jsx</code> and save to test HMR <br />
+          SECRET_KEY = {import.meta.env.VITE_SECRET_KEY} <br />
+          API_KEY = {import.meta.env.VITE_API_KEY}
         </p>
       </div>
       <p className="read-the-docs text-violet-900">
