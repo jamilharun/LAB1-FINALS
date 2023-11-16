@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
@@ -6,6 +6,11 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  });
   return (
     <>
       <div>
@@ -18,14 +23,22 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <div className=' flex justify-center text-center'>
+          <button onClick={() => setCount((count) => count + 1)}>
+            plus
+          </button>
+          <p className="read-the-doc">count is {count}</p>
+          <button onClick={() => setCount((count) => count - 0)}>
+            reset
+          </button>
+        </div>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          Edit <code>src/App.jsx</code> and save to test HMR <br />
+          SECRET_KEY = {import.meta.env.VITE_SECRET_KEY} <br />
+          API_KEY = {import.meta.env.VITE_API_KEY}
         </p>
       </div>
-      <p className="read-the-docs via-fuchsia-600">
+      <p className="read-the-docs text-violet-900">
         Click on the Vite and React logos to learn more
       </p>
     </>
