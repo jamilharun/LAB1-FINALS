@@ -6,6 +6,11 @@ import './App.css'
 function App() {
   const [count, setCount] = useState(0)
 
+  useEffect(() => {
+    setTimeout(() => {
+      setCount((count) => count + 1);
+    }, 1000);
+  });
   return (
     <>
       <div>
@@ -18,9 +23,15 @@ function App() {
       </div>
       <h1>Vite + React</h1>
       <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
+        <div className=' flex justify-center text-center'>
+          <button onClick={() => setCount((count) => count + 1)}>
+            plus
+          </button>
+          <p className="read-the-doc">count is {count}</p>
+          <button onClick={() => setCount((count) => count - 0)}>
+            reset
+          </button>
+        </div>
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR <br />
           SECRET_KEY = {import.meta.env.VITE_SECRET_KEY} <br />
