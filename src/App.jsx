@@ -22,10 +22,12 @@ function App() {
           count is {count}
         </button>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          Edit <code>src/App.jsx</code> and save to test HMR <br />
+          SECRET_KEY = {import.meta.env.VITE_SECRET_KEY} <br />
+          API_KEY = {import.meta.env.VITE_API_KEY}
         </p>
       </div>
-      <p className="read-the-docs via-fuchsia-600">
+      <p className="read-the-docs text-violet-900">
         Click on the Vite and React logos to learn more
       </p>
     </>
