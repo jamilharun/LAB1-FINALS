@@ -1,8 +1,26 @@
-# React + Vite
+# Version:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+v0.0.7
+- useEffect bugfixed
 
-Currently, two official plugins are available:
+v0.0.6
+- react hook, useEffect is not working
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+v0.0.5
+- download dotenv
+
+v0.0.4
+- add .env
+- .env variables undefined
+
+v0.0.3
+- tailwind bug fixed
+- download postcss and autoprefixer
+
+v0.0.2
+- download tailwindcss
+- tailwind bug
+  
+v0.0.1
+- project starts here
+- # React + Vite
